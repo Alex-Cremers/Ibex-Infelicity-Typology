@@ -2,8 +2,8 @@
 var shuffleSequence = seq(randomize(startsWith("acceptability")),"outro");
 
 var pageTitle = "Prolific Linguistic Survey";
-var completionMessage = "The results were successfully sent to the server. You can now validate your participation on Prolific. Thanks!";
-var completionErrorMessage = "There was an error sending the results to the server. Do not refresh this page. Check your internet connection and try sending the results again. ";
+var completionMessage = "The results were successfully sent to the server. You can now validate your participation on Prolific using the following code: CHNJPZ4O. Thanks!";
+var completionErrorMessage = "There was an error sending the results to the server. Do not refresh this page. Check your internet connection and try sending the results again.";
 
 
 var defaults = [
