@@ -22,6 +22,16 @@ html, body{
     width:1px;
     display:block;
   }
+  .target{
+	  margin:auto;
+	  padding:1em;
+	  font-size:120%;
+  }
+  .prompt{
+	  margin:auto;
+	  padding-bottom:1em;
+  }
+
  
 </style>
  
@@ -38,19 +48,49 @@ html, body{
   <div>
   <br>
   <p>
-       <b>Task:</b>  In this experiment, you will read a series of sentences. Your task will be to judge whether each sentence is true and indicate your response using a slider. Please adjust the slider between &ldquo;definitely not true&rdquo; and &ldquo;definitely true&rdquo; to reflect your judgment. 
-  </p>
+       <b>Task:</b> In this experiment, you will read a series of sentences. Your task will be to judge whether each sentence is true or not. You will answer the question &ldquo;Do you think the sentence is true?&rdquo; by adjusting a slider between &ldquo;definitely not&rdquo; and &ldquo;definitely&rdquo;.</p>
   <br>
   </div>
   
 <hr/>    
 
+
+
+<div style="width: 38em; border: 2px solid black;padding:1em;margin-top:2em;">
+<h3 style="text-align:center;">Example 1</h3>
+
+<p class='target' style="text-align:center;">&ldquo;Alaska is the northernmost US state.&rdquo;</p>
+  
+  
+  <p class='prompt' align="center">Do you think the sentence is true?</p>  
+  
+  <p>In this example, you would give a positive answer, since we know the sentence is true.</p>
+  
+  </div>
+ 
+<div style="width: 38em; border: 2px solid black;padding:1em;margin-top:2em;">
+<h3 style="text-align:center;">Example 2</h3>
+
+<p class='target' style="text-align:center;">&ldquo;Dogs fly better than seagulls.&rdquo;</p>
+  
+  
+  <p class='prompt' align="center">Do you think the sentence is true?</p>  
+  
+  <p>In this example, you would give a negative answer, because the sentence is clearly false.</p>
+  
+  </div>
+
+
+<hr/>    
+
 <div style="width: 40em;">  
 <br>
-<p>Remember before you start:</p>
+<p>Before you start:</p>
 <ul>
+  <li>You will give your responses using a slider. The slider follows your cursor and clicking validates your answer.</li>
   <li>At the end of the survey, after submitting your responses, you will receive a code to copy into Prolific to validate your participation.</li>
   <li>The survey should take 5 to 10 min.</li>
+  <li>Sometimes, it will not be very clear whether the sentence is true or false, and some sentences might sound a bit odd. In any case, follow your intuition.</li> 
 </ul>
   <br>
 </div>
