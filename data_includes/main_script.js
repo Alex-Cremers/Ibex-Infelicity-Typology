@@ -1,5 +1,7 @@
 
-var shuffleSequence = seq("instructions", startsWith("training2_"), randomize(startsWith("prompt2_")),"questionnaire");
+var promptNumber = 1;
+
+var shuffleSequence = seq("instructions", startsWith("training"+promptNumber+"_"), randomize(startsWith("prompt"+promptNumber+"_")),"questionnaire");
 
 var pageTitle = "Prolific Linguistic Survey";
 var completionMessage = "The results were successfully sent to the server. You can now validate your participation on Prolific using the following code: CHNJPZ4O. Thanks!";
@@ -36,7 +38,7 @@ var items = [
 
   ["questionnaire", "Form", {html:{include:"questionnaire.html"}}],
 
-  ["instructions", "Message", {html:{include:"instructions_prompt2.html"}}],
+  ["instructions", "Message", {html:{include:"instructions_prompt"+promptNumber+".html"}}],
     
 // training items
 
