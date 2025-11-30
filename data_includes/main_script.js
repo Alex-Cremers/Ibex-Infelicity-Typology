@@ -1,5 +1,13 @@
 
-var promptNumber = 1;
+const searchParams = new URLSearchParams(window.location.search);
+
+if (searchParams.has('withsquare')){
+    var promptNumber = searchParams.get('withsquare');
+} else {
+    var promptNumber = Math.floor(Math.random() * 6 + 1);
+    console.log("Cannot retrieve prompt number, setting to random value: "+promptNumber);
+}
+
 
 var shuffleSequence = seq("instructions", startsWith("training"+promptNumber+"_"), randomize(startsWith("prompt"+promptNumber+"_")),"questionnaire");
 
