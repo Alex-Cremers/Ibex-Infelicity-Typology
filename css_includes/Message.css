@@ -3,6 +3,6 @@
     width: 40em;
 }
 
-.continue-link { text-decoration: none; color: blue; margin-bottom:2em;}
+.continue-link { text-decoration: none; color: blue; padding-bottom:5em;}
 .continue-link:hover { text-decoration: underline; color: blue; }
 .continue-link:visited { color: blue; }
