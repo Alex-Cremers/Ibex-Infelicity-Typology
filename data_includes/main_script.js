@@ -2,14 +2,18 @@
 const searchParams = new URLSearchParams(window.location.search);
 
 if (searchParams.has('withsquare')){
-    var promptNumber = searchParams.get('withsquare');
+    var participantNumber = searchParams.get('withsquare');
+    var promptNumber = ((participantNumber-1) % 6)+1;
 } else {
+    var participantNumber = 0;
     var promptNumber = Math.floor(Math.random() * 6 + 1);
     console.log("Cannot retrieve prompt number, setting to random value: "+promptNumber);
 }
 
 
-var shuffleSequence = seq("consent", "instructions", startsWith("training"+promptNumber+"_"), randomize(startsWith("prompt"+promptNumber+"_")),"questionnaire");
+var shuffleSequence = seq("consent", "instructions", 
+  startsWith("training"+promptNumber+"_"), randomize(startsWith("prompt"+promptNumber+"_")),
+  startsWith("questionnaire"));
 
 var pageTitle = "Prolific Linguistic Survey";
 var completionMessage = "The results were successfully sent to the server. You can now validate your participation on Prolific using the following code: CHNJPZ4O. Thanks!";
@@ -44,7 +48,7 @@ var items = [
 
   ["sep", "Separator", {transfer:300, normalMessage:"+"}],
 
-  ["questionnaire", "Form", {html:{include:"questionnaire.html"}}],
+  ["questionnaire"+participantNumber, "Form", {html:{include:"questionnaire.html"}}],
 
   ["instructions", "Message", {html:{include:"instructions_prompt"+promptNumber+".html"}}],
   
